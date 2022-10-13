@@ -1,24 +1,23 @@
-import logo from './logo.svg';
+import React from 'react'
 import './App.css';
+import Employee from './components/Employee/Employee';
+import team from './data/team';
 
-function App() {
+
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+        <div className="track">
+          <section className="tracker">
+              <h2>Tracker</h2>
+
+              <div className="trackEmployees">
+                <Employee title="employeeInofAlbums" EmployeeArr={team} />
+              </div>
+            </section>
+        </div>
+    </>
   );
 }
 
