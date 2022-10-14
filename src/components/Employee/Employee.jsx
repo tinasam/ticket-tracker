@@ -6,18 +6,16 @@ import Counter from '../Counter/Counter'
 const Employee = (props) => {
 
     const employeeName = props.EmployeeArr.map((employees => 
-      <div>
-          <div>{employees.name}</div>
-          <div>{employees.role}</div>
-          <div className='counter' key={employees.id}></div>
-          <h4>Counter</h4>
+      <div className='employeeCard'  key={employees.id}>
+          <div className='empName'>{employees.name}</div>
+          <div className='empRole'>{employees.role}</div>
           <Counter />
       </div>
     ));
 
   return (
     
-    <div>{employeeName}</div>
+    <div className='allEmployees'>{employeeName}</div>
     
   )
 }
